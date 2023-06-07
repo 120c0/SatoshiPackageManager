@@ -31,10 +31,10 @@ void prompt(void)
 
 void select_option(const std::string &index)
 {
-  std::size_t array_index = atoi(index.c_str()) - 1;
-  if(array_index > 0 && array_index < ::options.size())
+  std::size_t array_index = atoi(index.c_str());
+  if(array_index > 0 && array_index <= ::options.size())
   {
-    Option &option = ::options[array_index];
+    Option &option = ::options[array_index - 1];
     option.setChecked(!option.getChecked());
   } else {
     system("clear");
