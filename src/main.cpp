@@ -14,8 +14,7 @@ static std::vector<Option> options{
   Option("Neovim (0.9.1)", "bash scripts/neovim.sh"),
   Option("Neovim Hemisu Theme", "bash scripts/neovim-hemisu-theme.sh"),
   Option("i3wm (Debain)", "bash scripts/i3wm.sh"),
-  Option("Alacritty Hyper Theme", "bash scripts/alacritty-hyper-theme.sh"),
-  Option("Test", "bash scripts/test.sh")
+  Option("Alacritty Hyper Theme", "bash scripts/alacritty-hyper-theme.sh")
   // Option("Unlock Debian Source")
   // Option("LXC"),
 };
