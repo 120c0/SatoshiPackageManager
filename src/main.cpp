@@ -10,9 +10,10 @@ extern "C"
 
 static std::vector<Option> options{
   Option("Install Package", "echo \"Install Mode...\""),
-  Option("Alacritty (+Rust)", "bash scripts/alacritty.sh"),
-  Option("Neovim"),
+  Option("Alacritty [+Rust] (0.12.1)", "bash scripts/alacritty.sh"),
+  Option("Neovim (0.9.1)", "bash scripts/neovim.sh"),
   Option("Neovim Hemisu Theme", "bash scripts/neovim-hemisu-theme.sh"),
+  Option("i3wm (Debain)", "bash scripts/i3wm.sh"),
   Option("Alacritty Hyper Theme", "bash scripts/alacritty-hyper-theme.sh"),
   Option("Test", "bash scripts/test.sh")
   // Option("Unlock Debian Source")

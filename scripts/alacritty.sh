@@ -4,7 +4,7 @@ ALACRITTY_DIRECTORY="alacritty-0.12.1"
 TEMP=$(mktemp -d)
 PWD=$(pwd)
 
-sudo apt install cmake pkg-config libfreetype6-dev libfontconfig1-dev libxcb-xfixes0-dev libxkbcommon-dev python3
+sudo apt install cmake pkg-config libfreetype6-dev libfontconfig1-dev libxcb-xfixes0-dev libxkbcommon-dev python3 -y
 cd $TEMP
 
 wget https://github.com/alacritty/alacritty/archive/refs/tags/$ALACRITTY_DOWNLOAD_FILE
