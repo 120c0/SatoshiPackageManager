@@ -36,7 +36,7 @@ const bool &Option::getChecked() const noexcept
 
 const std::ostream& operator<<(std::ostream &out, const Option &option) noexcept
 {
-  out << option.getDescription() << std::setfill(' ') << std::setw(30 - option.getDescription().size() + 4) << " [" <<
+  out << option.getDescription() << std::setfill(' ') << std::setw(33 - option.getDescription().size() + 4) << " [" <<
     (option.getChecked() ? '#' : ' ') << "]\n";
   return out;
 }

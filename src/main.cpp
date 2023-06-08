@@ -9,23 +9,22 @@ extern "C"
 #include "Option.hpp"
 
 static std::vector<Option> options{
-  Option("Install Package", "echo \"Install Mode...\""),
+  Option("Install Package Selected", "echo \"Install Mode...\""),
   Option("Alacritty [+Rust] (0.12.1)", "bash scripts/alacritty.sh"),
   Option("Neovim (0.9.1)", "bash scripts/neovim.sh"),
-  Option("Neovim Hemisu Theme", "bash scripts/neovim-hemisu-theme.sh"),
-  Option("i3wm (Debain)", "bash scripts/i3wm.sh"),
+  Option("Neovim Setting Hemisu Theme", "bash scripts/neovim-hemisu-theme.sh"),
+  Option("i3-wm (Debain 11)", "bash scripts/i3wm.sh"),
   Option("Alacritty Hyper Theme", "bash scripts/alacritty-hyper-theme.sh")
-  // Option("Unlock Debian Source")
-  // Option("LXC"),
 };
 
 void prompt(void)
 {
   system("clear");
   int index = 1;
+  std::cout << "| Recommended system: Rasoberry Pi OS Lite |\n\n";
   for(const Option& option : ::options)
     std::cout << ' ' << index++ << " - " << option;
-  std::cout << "99 - next\n\noption >> ";
+  std::cout << "99 - continue...\n\noption >> ";
 }
 
 void select_option(const std::string &index)
