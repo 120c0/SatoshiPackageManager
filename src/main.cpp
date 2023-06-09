@@ -48,8 +48,7 @@ void install_packages()
   if(::options.front().getChecked())
 	{
     for(const Option &option : ::options)
-      if(option.getChecked())
-        system(option.getCommand().c_str());
+      if(option.getChecked()) system(option.getCommand().c_str());
 	}
   else
     std::cout << "Exting without install anything...\n";
