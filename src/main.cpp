@@ -19,14 +19,14 @@ static std::vector<Option> options {
 
 void prompt(void)
 {
-  system("clear");
-  int index = 1;
+  system("clear"); int index = 1;
+
   std::cout << "| Recommended system: Rasoberry Pi OS Lite |\n\n";
   for(const Option& option : ::options)
     std::cout << ' ' << index++ << " - " << option;
   std::cout <<
 		"99 - " << (::options.front().getChecked() ?
-		"Install" : "Exit") << "\n\ninput >> ";
+		"Install" : "Exit") << "\n\nInput >> ";
 }
 
 void select_option(const std::string &index)
@@ -46,17 +46,13 @@ void select_option(const std::string &index)
 void install_packages()
 {
   if(::options.front().getChecked())
-  {
+	{
     for(const Option &option : ::options)
-    {
       if(option.getChecked())
-      {
         system(option.getCommand().c_str());
-      }
-    }
-  } else {
+	}
+  else
     std::cout << "Exting without install anything...\n";
-  }
 }
 
 int main(void)
