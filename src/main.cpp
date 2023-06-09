@@ -8,8 +8,8 @@ extern "C"
 
 #include "Option.hpp"
 
-static std::vector<Option> options{
-  Option("Install Package Selected", "echo \"Install Mode...\""),
+static std::vector<Option> options {
+  Option("[I want install selected package]", "echo \"Install Mode...\""),
   Option("Alacritty [+Rust] (0.12.1)", "bash scripts/alacritty.sh"),
   Option("Neovim (0.9.1)", "bash scripts/neovim.sh"),
   Option("Neovim Setting Hemisu Theme", "bash scripts/neovim-hemisu-theme.sh"),
@@ -24,7 +24,9 @@ void prompt(void)
   std::cout << "| Recommended system: Rasoberry Pi OS Lite |\n\n";
   for(const Option& option : ::options)
     std::cout << ' ' << index++ << " - " << option;
-  std::cout << "99 - continue...\n\noption >> ";
+  std::cout <<
+		"99 - " << (::options.front().getChecked() ?
+		"Install" : "Exit") << "\n\ninput >> ";
 }
 
 void select_option(const std::string &index)
