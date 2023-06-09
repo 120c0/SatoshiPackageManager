@@ -38,7 +38,7 @@ void select_option(const std::string &index)
     option.setChecked(!option.getChecked());
   } else {
     system("clear");
-    std::cerr << "\033[31mOption error...\n\033[0m]";
+    std::cerr << "\033[31mOption not valid...\n\033[0m]";
     sleep(1);
   }
 }
