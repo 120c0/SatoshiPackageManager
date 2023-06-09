@@ -7,7 +7,7 @@ FILE_EXTENSION := cpp
 SOURCE_FILES := $(wildcard $(SOURCE_DIR)/*.$(FILE_EXTENSION))
 OBJECT_FILES := $(SOURCE_FILES:%.$(FILE_EXTENSION)=%.o)
 
-CFLAGS := -Wall -Wextra -pedantic -I$(INCLUDE_DIR)
+CFLAGS := -Wall -Wextra -pedantic -I$(INCLUDE_DIR) -O3 -DNDEBUG -s
 LDLINKS := 
 COMPILER := g++
 REMOVE := rm
