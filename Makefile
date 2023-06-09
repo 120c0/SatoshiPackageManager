@@ -1,4 +1,4 @@
-TARGET := install
+TARGET := spm
 
 INCLUDE_DIR := include
 SOURCE_DIR := src
